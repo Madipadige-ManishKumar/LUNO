@@ -1,0 +1,29 @@
+Here is a simple Python function for calculating the factorial of a number using recursion:
+
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+``
+
+You can use this function by calling it with an integer argument, like so:
+
+```python
+print(factorial(5))  # Output: 120
+```
+
+Remember that factorials grow very quickly, so larger values may cause the program to take a long time or even run out of memory.
+
+If you don't want to use recursion, here's a version that uses a loop:
+
+```python
+def factorial(n):
+    result = 1
+    for i in range(2, n+1):
+        result *= i
+    return result
+```
+
+Both versions do the same thing, but the loop version is usually more efficient, especially for larger inputs. The loop version performs better because multiplication is cheaper than recursive calls. However, the choice between recursion and a loop is often a matter of style, and once the input is large enough, efficiency concerns become less important.
